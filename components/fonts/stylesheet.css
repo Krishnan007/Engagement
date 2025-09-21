@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ML-TTAnakha';
+    src: url('ML-TTAnakha-Bold.woff2') format('woff2'),
+        url('ML-TTAnakha-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

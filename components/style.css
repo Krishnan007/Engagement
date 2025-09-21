@@ -1,0 +1,28 @@
+.site-title {
+	font-family: "Chilanka", cursive;
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 1;
+	/* text-shadow: 0.5px 0.5px 0 currentColor; */
+}
+
+/* Logo colors */
+.logo-light {
+	color: #ffffff; /* white for light background */
+}
+
+.logo-dark {
+	color: #000000; /* black for dark background */
+}
+
+/* Toggle example */
+body.dark-theme .logo-light {
+	display: none;
+}
+body.dark-theme .logo-dark {
+	display: inline-block;
+}
+
+.lead {
+	font-weight: 700; /* force bold */
+}
