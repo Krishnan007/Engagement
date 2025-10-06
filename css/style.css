@@ -819,13 +819,17 @@ input::-webkit-inner-spin-button {
 
 /* Video Background */
 .wedding_img_box .wedding-video {
-	position: absolute;
+	/* position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 352px;
+	border-radius: 352px; */
+	  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
 }
 
 /* Slideshow */
