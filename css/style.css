@@ -832,6 +832,12 @@ input::-webkit-inner-spin-button {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .wedding_img_box {
+    height: 300px;
+  }
+}
+
 /* Slideshow */
 .slideshow {
 	position: relative;
@@ -874,21 +880,11 @@ input::-webkit-inner-spin-button {
 }
 
 @keyframes fadeSlideshow {
-	0% {
-		opacity: 0;
-	}
-	5% {
-		opacity: 1;
-	}
-	25% {
-		opacity: 1;
-	}
-	30% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
+  0% { opacity: 1; }
+  20% { opacity: 1; }
+  25% { opacity: 0; }
+  95% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* @keyframes back {
