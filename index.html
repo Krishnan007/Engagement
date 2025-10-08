@@ -45,6 +45,40 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
         }
+
+        /* Tablet and smaller desktop views (adjust max-width as needed for your design) */
+@media (max-width: 992px) {
+    /* Ensure the main container doesn't force a two-column layout that hides content */
+    .Wedding_card_main_wrapper {
+        display: flex; /* Assuming it's using flex or grid */
+        flex-direction: column; /* Stacks the boxes vertically */
+    }
+
+    /* Ensure the image box takes up space in the stacked layout */
+    .wedding_box2 {
+        width: 100%; /* Full width in tablet/mobile */
+        order: -1; /* Place the image box *before* the text box if you want it on top */
+        padding-top: 20px; /* Add some space if needed */
+        padding-bottom: 20px;
+    }
+    
+    /* Ensure the image container has a set height so the slideshow is visible */
+    .wedding_img_box.with-bg-size {
+        height: 300px; /* Example height, adjust as needed */
+        width: 100%;
+        overflow: hidden; /* Important for the slideshow to work without spilling */
+        position: relative;
+    }
+    
+    /* Ensure the images themselves are covering the container */
+    .slideshow img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* This makes sure images fill the box without being distorted */
+        /* You likely have absolute positioning or a flex/grid setup for the slideshow, 
+           ensure that setup is correct for the images to cycle/display. */
+    }
+}
     </style>
 </head>
 
@@ -146,6 +180,30 @@
     <script type="text/javascript" src="js/fontawesome.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
+
+            if (isMobile) {
+                // Scroll to a point that brings the image section into view
+                const imageBox = document.querySelector('.wedding_box2');
+
+                if (imageBox) {
+                    // Wait a moment for the initial layout to settle (AOS animations, etc.)
+                    setTimeout(() => {
+                        // Get the position of the image box and scroll to it.
+                        // Adding 50px provides a small buffer.
+                        const offsetTop = imageBox.offsetTop + 50;
+
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }, 1000); // 1-second delay
+                }
+            }
+        });
+    </script>
 
 </body>
 
