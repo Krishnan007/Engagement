@@ -872,6 +872,9 @@ input::-webkit-inner-spin-button {
 .slideshow img:nth-child(5) {
 	animation-delay: 20s;
 }
+.slideshow img:nth-child(6) {
+	animation-delay: 25s;
+}
 
 @keyframes fadeSlideshow {
   0% { opacity: 1; }
