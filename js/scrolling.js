@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 				const finalTargetPosition = venueBox.offsetTop - 100;
 
 				// Start the custom slow scroll animation
-				animateScroll(finalTargetPosition, 4000); // 4000ms = 4 seconds duration
-			}, 1000); // 10-second delay before starting the scroll
+				animateScroll(finalTargetPosition, 10000); // 4000ms = 4 seconds duration
+			}, 500); // 10-second delay before starting the scroll
 		}
 	}
 });
