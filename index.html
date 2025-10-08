@@ -46,7 +46,36 @@
             box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
         }
 
+@media (max-width: 992px) {
+    /* Ensure the main container doesn't force a two-column layout that hides content */
+    .Wedding_card_main_wrapper {
+        display: flex;
+        flex-direction: column; /* Stacks the boxes vertically: box1 then box2 */
+    }
 
+    /* Ensure the image box takes up space in the stacked layout */
+    .wedding_box2 {
+        width: 100%;
+        /* REMOVE: order: -1; */ /* Removing this line keeps the images below the text */
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    /* Ensure the image container has a set height so the slideshow is visible */
+    .wedding_img_box.with-bg-size {
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    /* Ensure the images themselves are covering the container */
+    .slideshow img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
     </style>
 </head>
 
