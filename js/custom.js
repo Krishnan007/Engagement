@@ -5,7 +5,7 @@
 $(function () {
 	// var targetDate = new Date(Date.UTC(2028, 3, 12));
 	// Target: 2025 October 29, 10:25 AM IST
-	var targetDate = new Date("2025-10-29T10:25:00+05:30");
+	var targetDate = new Date("2025-10-288T10:25:00+05:30");
 	var now = new Date();
 
 	window.days = daysBetween(now, targetDate);
